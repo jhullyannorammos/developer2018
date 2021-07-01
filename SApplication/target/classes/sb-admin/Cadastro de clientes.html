@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cadastro de clientes</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+    <script>
+  $(function(){
+    $("#datepicker").datepicker();
+  });
+  </script>
+  </head>
+
+  <script>
+  $(document).ready( function () {
+      $('.table-responsive').DataTable();
+  } );
+});
+</script>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JREnteprise</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Estatisticas</a></li>
+            <li class="active"><a href="clientes.html"><i class="fa fa-user"></i> Clientes</a></li>
+            <li ><a href="tables.html"><i class="fa fa-table"></i> Schemas</a></li>
+            <li><a href="forms.html"><i class="fa fa-edit"></i> Consulta</a></li>
+            <li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i> Monitoramento</a></li>
+            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Ferramentas</a></li>
+            <li><a href="blank-page.html"><i class="fa fa-file"></i> Relatorios</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Negociações <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Vendas</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown messages-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Mensagens <span class="badge">7</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">7 New Messages</li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">View Inbox <span class="badge">7</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown alerts-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alertas <span class="badge">3</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Default <span class="label label-default">Default</span></a></li>
+                <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
+                <li><a href="#">Success <span class="label label-success">Success</span></a></li>
+                <li><a href="#">Info <span class="label label-info">Info</span></a></li>
+                <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
+                <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">View All</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Juliano Ramos <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Minha conta</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Email <span class="badge">7</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Sistema</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Sair</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Cadastro <small> de clientes</small></h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+              <li class="active"><i class="fa fa-user"></i> clientes</li>
+            </ol>
+            <div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              We're using <a class="alert-link" href="http://tablesorter.com/docs/">Tablesorter 2.0</a> for the sort function on the tables. Read the documentation for more customization options or feel free to use something else!
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover table-striped tablesorter">
+                <tbody>
+                  <tr>
+                    <td><label>Nome completo</label></td>
+                    <td><input class="form-control" placeholder="Julian Rayon"></td>
+
+                    <td><label>Email</label></td>
+                    <td><div class="form-group input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" placeholder="@warnerbros.com">
+                    </div></td>
+
+                    <td><label>Data de nascimento</label></td>
+                    <td><input class="form-control" onkeypress="" maxlength="11" placeholder="99/99/9999"></td>
+                  </tr>
+                  <tr>
+
+                  </tr>
+                  <tr>
+                    <td><label>CPF</label></td>
+                    <td><input class="form-control" onkeypress="" maxlength="11" placeholder="999.999.999-99"></td>
+
+                    <td><label>Selecione a compania</label></td>
+                    <td>
+                    <select class="form-control">
+                      <option>Warner Bros</option>
+                      <option>DC Comics</option>
+                      <option>Paramoun</option>
+                      <option>Marvel</option>
+                    </select></td>
+
+                    <td><label>Salario</label></td>
+                    <td><div class="form-group input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-addon">.00</span>
+                    </div></td>
+                  </tr>
+                  <tr>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+          <div class="col-lg-12">
+
+            <div class="table-responsive">
+              <table class="table table-hover table-striped tablesorter">
+                <thead>
+                  <tr>
+                    <th>Aniversario <i class="fa fa-sort"></i></th>
+                    <th>Nome completo <i class="fa fa-sort"></i></th>
+                    <th>Email <i class="fa fa-sort"></i></th>
+                    <th>CPF <i class="fa fa-sort"></i></th>
+                    <th>Empresa <i class="fa fa-sort"></i></th>
+                    <th>Salario <i class="fa fa-sort"></i></th>
+                    <th> <i class="fa fa-sort"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01/07/1996</td>
+                    <td>Arnold Schwazenager</td>
+                    <td>terminator@warnerbros.com</td>
+                    <td>111.222.333-45</td>
+                    <td>Paramount</td>
+                    <td>$3021.33</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>21/11/1986</td>
+                    <td>Klark Kent</td>
+                    <td>superman@dcomics.com</td>
+                    <td>230.225.658-01</td>
+                    <td>DC Comics</td>
+                    <td>$2039.52</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>22/09/1995</td>
+                    <td>James Bond</td>
+                    <td>agent007@warnerbros.com</td>
+                    <td>261.684.963-25</td>
+                    <td>Warner Bros</td>
+                    <td>$2034.12</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>12/06/1992</td>
+                    <td>Bruce Wayne</td>
+                    <td>batman@warnerbros.com</td>
+                    <td>665.257.985-98</td>
+                    <td>Warner Bros</td>
+                    <td>$1609.34</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>13/03/1984</td>
+                    <td>Peter Parker</td>
+                    <td>spider@marvel.com</td>
+                    <td>951.611.984-58</td>
+                    <td>Marvel</td>
+                    <td>$1644.43</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>13/08/1982</td>
+                    <td>Lex Luthor</td>
+                    <td>luthor@dcomics.com</td>
+                    <td>230.258.658-98</td>
+                    <td>DC Comics</td>
+                    <td>$2300.52</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>17/07/1989</td>
+                    <td>Steve Rogers</td>
+                    <td>captain@marvel.com</td>
+                    <td>421.478.214-95</td>
+                    <td>Marvel</td>
+                    <td>$7240.32</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>04/11/1987</td>
+                    <td>Keanu reeves</td>
+                    <td>neo@warnerbros.com</td>
+                    <td>123.354.254-89</td>
+                    <td>Warner Bros</td>
+                    <td>$1269.34</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>08/08/1983</td>
+                    <td>Anthony Stark</td>
+                    <td>ironman@marvel.com</td>
+                    <td>101.611.984-58</td>
+                    <td>Marvel</td>
+                    <td>$1644.43</td>
+                    <td><div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-user"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                    </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+
+
+
+  </body>
+</html>

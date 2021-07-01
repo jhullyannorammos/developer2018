@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FAZENTECH</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">FAZEN TECH</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li><a href="Dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="Negociações.html"><i class="fa fa-bar-chart-o"></i> Negociações</a></li>
+            <li class="active"><a href="Mercadoria.html"><i class="fa fa-table"></i> Mercadoria</a></li>
+            <li><a href="Produção.html"><i class="fa fa-edit"></i> Produção</a></li>
+            <li><a href="Máquinario.html"><i class="fa fa-wrench"></i> Maquinário</a></li>
+            <li><a href="bootstrap-Monitoramento.html"><i class="fa fa-desktop"></i> Monitoramento</a></li>
+            <li><a href="bootstrap-Ferramentas.html"><i class="fa fa-wrench"></i> Ferramentas</a></li>
+            <li><a href="blank-Relatorios.html"><i class="fa fa-file"></i> Relatorios</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Administrativo <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Recursos humanos</a></li>
+                <li><a href="#">Contabilidade</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">BI</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown messages-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Mensagens <span class="badge">7</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">07 Novas Mensagens</li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">Lúcia Smith:</span>
+                    <span class="message">Bom tarde, Confirmação de vendas...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 04:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">Lúcia Smith:</span>
+                    <span class="message">Bom dia, Solicitação de pedido...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 09:34 AM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">Lúcia Smith:</span>
+                    <span class="message">John Deere com novas máquinas...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 08:01 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">Visualizar caixa completa <span class="badge">7</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown alerts-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Tickets <span class="badge">3</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Normal <span class="label label-default">Normal</span></a></li>
+                <li><a href="#">Prioridade <span class="label label-primary">Prioridade</span></a></li>
+                <li><a href="#">Confirmado <span class="label label-success">Confirmado</span></a></li>
+                <li><a href="#">Informátivo <span class="label label-info">Informátivo</span></a></li>
+                <li><a href="#">Atendendo <span class="label label-warning">Atendendo</span></a></li>
+                <li><a href="#">Urgente <span class="label label-danger">Urgente</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">View All</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Lúcia Smith <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Minha conta</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Caixa de entrada <span class="badge">7</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Minhas configurações</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Sair</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Monitoramento <small>producao</small></h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+              <li class="active"><i class="fa fa-table"></i> Controle de ordenha</li>
+            </ol>
+            <div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Estamos preparando tudo para você <a class="alert-link" href="http://tablesorter.com/docs/">Fazen Tech 2.0</a> O aplicativo tem atualizações de segurança a realizar!
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2></h2>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover tablesorter">
+                <thead>
+                  <tr>
+                    <th>Codigo <i class="fa fa-sort"></i></th>
+                    <th>Saúde <i class="fa fa-sort"></i></th>
+                    <th>Animal <i class="fa fa-sort"></i></th>
+                    <th>Raça <i class="fa fa-sort"></i></th>
+                    <th>Data da ordenha <i class="fa fa-sort"></i></th>
+                    <th>leite ordenhado <i class="fa fa-sort"></i></th>
+                    <th>Operador<i class="fa fa-sort"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A12BG45K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Pardo Suiço</td>
+                    <td>01/11/2020 as 07:32</td>
+                    <td>15 Litros</td>
+                    <td>Marcus Winicius</td>
+                  </tr>
+                  <tr>
+                    <td>9WWBG99K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Zebu leiteira</td>
+                    <td>01/11/2020 as 07:32</td>
+                    <td>11 Litros</td>
+                    <td>Roberto Carlos</td>
+                  </tr>
+                  <tr>
+                    <td>KJJBG99K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Zebu leiteira</td>
+                    <td>01/11/2020 as 07:32</td>
+                    <td>13 Litros</td>
+                    <td>Roberto Carlos</td>
+                  </tr>
+                  <tr>
+                    <td>A99BG99K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Pardo Suiço</td>
+                    <td>01/11/2020 as 07:32</td>
+                    <td>12 Litros</td>
+                    <td>Roberto Carlos</td>
+                  </tr>
+                  <tr>
+                    <td>M55BG45K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Holandesa</td>
+                    <td>01/11/2020 as 07:32</td>
+                    <td>12 Litros</td>
+                    <td>Roberto Carlos</td>
+                  </tr>
+                  <tr>
+                    <td>A13BG46K</td>
+                    <td>Saudavel</td>
+                    <td>Vaca</td>
+                    <td>Jersey</td>
+                    <td>01/11/2020 as 06:38</td>
+                    <td>09 Litros</td>
+                    <td>Marcus Winicius</td>
+                  </tr>
+                  <tr>
+                    <td>K11GH12K</td>
+                    <td>inseminado</td>
+                    <td>Vaca</td>
+                    <td>Holandesa</td>
+                    <td>-</td>
+                    <td>0 Litros</td>
+                    <td>Marcus Winicius</td>
+                  </tr>
+                  <tr>
+                    <td>W23GH12K</td>
+                    <td>Em internação</td>
+                    <td>Vaca</td>
+                    <td>Jersey</td>
+                    <td>-</td>
+                    <td>0 Litros</td>
+                    <td>Marcus Winicius</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Contextual Classes</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover table-striped tablesorter">
+                <thead>
+                  <tr>
+                    <th>Page <i class="fa fa-sort"></i></th>
+                    <th>Visits <i class="fa fa-sort"></i></th>
+                    <th>% New Visits <i class="fa fa-sort"></i></th>
+                    <th>Revenue <i class="fa fa-sort"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="active">
+                    <td>/index.html</td>
+                    <td>1265</td>
+                    <td>32.3%</td>
+                    <td>$321.33</td>
+                  </tr>
+                  <tr class="success">
+                    <td>/about.html</td>
+                    <td>261</td>
+                    <td>33.3%</td>
+                    <td>$234.12</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>/sales.html</td>
+                    <td>665</td>
+                    <td>21.3%</td>
+                    <td>$16.34</td>
+                  </tr>
+                  <tr class="danger">
+                    <td>/blog.html</td>
+                    <td>9516</td>
+                    <td>89.3%</td>
+                    <td>$1644.43</td>
+                  </tr>
+                  <tr>
+                    <td>/404.html</td>
+                    <td>23</td>
+                    <td>34.3%</td>
+                    <td>$23.52</td>
+                  </tr>
+                  <tr>
+                    <td>/services.html</td>
+                    <td>421</td>
+                    <td>60.3%</td>
+                    <td>$724.32</td>
+                  </tr>
+                  <tr>
+                    <td>/blog/post.html</td>
+                    <td>1233</td>
+                    <td>93.2%</td>
+                    <td>$126.34</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <h2>Bootstrap Docs</h2>
+            <p>For complete documentation, please visit <a target="_blank" href="http://getbootstrap.com/css/#tables">Bootstrap's Tables Documentation</a>.</p>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+
+  </body>
+</html>
